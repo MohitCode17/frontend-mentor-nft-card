@@ -1,0 +1,160 @@
+:root {
+  --primarysoftblue: hsl(215, 51%, 70%);
+  --primarycyan: hsl(178, 100%, 50%);
+  --mainbgdarkblue: hsl(217, 54%, 11%);
+  --mainbgcardblue: hsl(216, 50%, 16%);
+  --maindarkblueline: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Outfit", sans-serif;
+}
+
+.container {
+  background-color: var(--mainbgdarkblue);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--mainbgcardblue);
+  max-width: 300px;
+  min-height: 500px;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.top {
+  width: 100%;
+  height: 250px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.top .banner-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primarycyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.overlay img {
+  width: 25px;
+  height: 25px;
+  opacity: 1;
+}
+
+.top:hover .overlay {
+  opacity: 0.6;
+}
+
+.bottom h1 {
+  font-size: 20px;
+  margin: 14px 0;
+  color: var(--white);
+}
+
+.bottom p {
+  font-size: 16px;
+  color: var(--primarysoftblue);
+  line-height: 24px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.info .info-left,
+.info .info-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.info-left span {
+  color: var(--primarycyan);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.info-right img {
+  width: 15px;
+}
+
+.info-right span {
+  color: var(--primarysoftblue);
+  font-size: 13px;
+}
+
+.line {
+  height: 1px;
+  background-color: var(--maindarkblueline);
+  margin-top: 25px;
+}
+
+.createdBy {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  gap: 15px;
+}
+
+.createdBy .createdByProfile {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.createdByProfile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileName {
+  color: var(--primarysoftblue);
+  font-size: 14px;
+}
+
+.profileName span {
+  color: var(--white);
+}
+
+.bottom h1:hover,
+.profileName span:hover {
+  cursor: pointer;
+  color: var(--primarycyan);
+}
